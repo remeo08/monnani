@@ -19,5 +19,10 @@ from . import views
 
 urlpatterns = [
     path("", views.Results.as_view()),
-    path("top_result", views.TopResult.as_view())
+    path("<int:pk>", views.ResultsDetail.as_view()),
+    path("top_result", views.TopResult.as_view()),
+    path("answer/", views.Answers.as_view()),
+    path("answer/<int:pk>", views.AnswersDetail.as_view()),
+    path("mbti/", views.Mbtis.as_view()),
+    path("mbti/<int:pk>", views.MbtisDetail.as_view()),
 ]

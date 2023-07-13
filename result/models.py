@@ -3,8 +3,8 @@ from common.models import CommonModel
 
 
 class Result(CommonModel):
-    
-    """ INTJA mbti 그 자체만 받아옴 """
+
+    """INTJA mbti 그 자체만 받아옴"""
 
     result = models.CharField(
         max_length=5,
@@ -16,7 +16,7 @@ class Result(CommonModel):
 
 class Mbti(CommonModel):
 
-    """ 선택지와 연결된 mbti """
+    """각각의 선택지와 연결된 mbti(총 15개)"""
 
     mbti = models.CharField(max_length=15)
 
@@ -26,7 +26,7 @@ class Mbti(CommonModel):
 
 class Answer(CommonModel):
 
-    """ 선택지 문자열 """
+    """선택지 문자열"""
 
     answer = models.TextField()
 
