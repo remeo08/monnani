@@ -18,8 +18,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.Results.as_view()),
-    path("totalUser/", views.TotalUser.as_view()),
-    path("top_MBTI/", views.TopMBTI.as_view()),
-    path("selected_answers/", views.SelectedAnswers.as_view()),
+    path("", views.Shares.as_view()),
 ]

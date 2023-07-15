@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Result
+from .models import Share
 
 
-class ResultSerializer(ModelSerializer):
+class ShareSerializer(ModelSerializer):
     class Meta:
-        model = Result
+        model = Share
         fields = "__all__"
