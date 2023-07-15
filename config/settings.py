@@ -29,9 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-THIRD_PARTY_APPS = [
-    "rest_framework",
-]
+THIRD_PARTY_APPS = ["rest_framework", "corsheaders"]
 
 CUSTOM_APPS = [
     "result.apps.ResultConfig",
