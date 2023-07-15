@@ -44,6 +44,5 @@ class TopMBTI(APIView):
 
 class SelectedAnswers(APIView):
     def get(self, request):
-    pass
         # all_answers = Result.objects.values("answer")
         # single_data = all_answers.split('\,')
