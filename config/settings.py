@@ -41,8 +41,8 @@ THIRD_PARTY_APPS = [
 ]
 
 CUSTOM_APPS = [
-    "common.apps.CommonConfig",
-    "mbti_get.apps.MbtiGetConfig",
+    "result.apps.ResultConfig",
+    "share.apps.ShareConfig",
 ]
 
 SYSTEM_APPS = [
