@@ -1,10 +1,9 @@
-[tool.poetry]
-name = "monnani-vegi-project"
+name = "monnani"
 version = "0.1.0"
 description = ""
 authors = ["byungyong <quddyddlrk@naver.com>"]
+license = "MIT"
 readme = "README.md"
-packages = [{include = "monnani_vegi_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
