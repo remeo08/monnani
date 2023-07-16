@@ -119,6 +119,7 @@ if DEBUG:
 else:
     DATABASES = {
         "default": dj_database_url.config(
+            default='postgresql://postgres:postgres@localhost:5432/monnani',
             conn_max_age=600,
         )  # how long connection lasts
     }
