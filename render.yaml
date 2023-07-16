@@ -2,11 +2,13 @@ databases:
   - name: vegiteam
     databaseName: vegiteam
     user: vegiteam
+    region: singapore
 
 services:
   - type: web
     name: vegiteam
     runtime: python
+    region: singapore
     buildCommand: "./build.sh"
     startCommand: "gunicorn config.wsgi:application"
     envVars:
