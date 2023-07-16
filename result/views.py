@@ -3,8 +3,9 @@ from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 from rest_framework.status import HTTP_204_NO_CONTENT, HTTP_200_OK
 from django.db.models import Count
-from .serializers import ResultSerializer
+from .serializers import ResultSerializer, AnswerSerializer
 from .models import Result
+from collections import defaultdict
 
 
 class Results(APIView):
@@ -44,5 +45,25 @@ class TopMBTI(APIView):
 
 class SelectedAnswers(APIView):
     def get(self, request):
+        result = []
+        all_answers = Result.objects.values("answer")
+        serializer = AnswerSerializer(all_answers, many=True)
+
+        counts = defaultdict(int)  # 중복 개수를 저장할 defaultdict 생성
+
+        for item in serializer.data:
+            answers = item["answer"].split(",")
+            for answer in answers:
+                counts[answer] += 1  # 각 문자열의 중복 개수 카운트
+
+        result = [
+            {"answer": answer, "count": count} for answer, count in counts.items()
+        ]
+        return Response(result)
+
+        # result = []
         # all_answers = Result.objects.values("answer")
-        # single_data = all_answers.split('\,')
+        # serializer = AnswerSerializer(all_answers, many=True)
+        # for i in serializer.data:
+        #     result.append(i["answer"].split(","))
+        # return Response(result)

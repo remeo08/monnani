@@ -6,3 +6,9 @@ class ResultSerializer(ModelSerializer):
     class Meta:
         model = Result
         fields = "__all__"
+
+
+class AnswerSerializer(ModelSerializer):
+    class Meta:
+        model = Result
+        fields = ("answer",)
