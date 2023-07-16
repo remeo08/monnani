@@ -8,6 +8,7 @@ packages = [{include = "monnani_back"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+django-cors-headers = "^4.2.0"
 django = "^4.2.3"
 djangorestframework = "^3.14.0"
 
