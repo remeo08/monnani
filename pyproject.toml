@@ -1,8 +1,10 @@
-name = "monnani-back"
+[tool.poetry]
+name = "monnani_backend_django"
 version = "0.1.0"
 description = ""
 authors = ["remeo08 <rmeorux5870@gmail.com>"]
 readme = "README.md"
+packages = [{include = "monnani_backend_django"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
