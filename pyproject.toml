@@ -9,7 +9,6 @@ packages = [{include = "monnani_vegi_project"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 django-cors-headers = "^4.2.0"
-psycopg2 = "^2.9.6"
 djangorestframework = "^3.14.0"
 dj-database-url = "^2.0.0"
 psycopg2-binary = "^2.9.6"
