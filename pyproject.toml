@@ -1,10 +1,8 @@
-[tool.poetry]
 name = "monnani-back"
 version = "0.1.0"
 description = ""
 authors = ["remeo08 <rmeorux5870@gmail.com>"]
 readme = "README.md"
-packages = [{include = "monnani_back"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
